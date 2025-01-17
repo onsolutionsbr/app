@@ -1,0 +1,37 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Configurações do Admin" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="Configurações do Google Sheets" class="text-xl font-bold mb-4" />
+            
+            <Label text="Link da Planilha" class="text-sm font-medium text-gray-700" />
+            <TextField text="{{ spreadsheetLink }}" hint="Cole o link da planilha aqui" class="input mb-4" />
+            
+            <Label text="Stripe API" class="text-xl font-bold mb-4" />
+            
+            <Label text="Public Key" class="text-sm font-medium text-gray-700" />
+            <TextField text="{{ stripePublicKey }}" hint="Stripe Public Key" class="input mb-2" />
+            
+            <Label text="Secret Key" class="text-sm font-medium text-gray-700" />
+            <TextField text="{{ stripeSecretKey }}" hint="Stripe Secret Key" secure="true" class="input mb-4" />
+            
+            <Label text="Firebase" class="text-xl font-bold mb-4" />
+            
+            <Label text="Project ID" class="text-sm font-medium text-gray-700" />
+            <TextField text="{{ firebaseProjectId }}" hint="Firebase Project ID" class="input mb-2" />
+            
+            <Label text="API Key" class="text-sm font-medium text-gray-700" />
+            <TextField text="{{ firebaseApiKey }}" hint="Firebase API Key" class="input mb-2" />
+            
+            <Label text="Auth Domain" class="text-sm font-medium text-gray-700" />
+            <TextField text="{{ firebaseAuthDomain }}" hint="Firebase Auth Domain" class="input mb-2" />
+            
+            <Button text="Salvar Configurações" tap="{{ onSaveSettings }}" class="btn btn-primary mt-4" />
+            
+            <Label text="{{ message }}" class="text-center mt-2" 
+                   textWrap="true"
+                   class="{{ messageType === 'error' ? 'text-red-500' : 'text-green-500' }}" />
+        </StackLayout>
+    </ScrollView>
+</Page>

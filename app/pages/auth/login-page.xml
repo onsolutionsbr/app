@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Braziliana App" />
+    
+    <StackLayout class="p-4">
+        <Label text="Welcome to Braziliana" class="text-3xl text-center mb-4" />
+        
+        <TextField hint="Email" text="{{ email }}" keyboardType="email" class="input mb-2" />
+        <TextField hint="Password" text="{{ password }}" secure="true" class="input mb-4" />
+        
+        <Button text="Login" tap="{{ onLogin }}" class="btn btn-primary mb-2" />
+        <Button text="Sign Up" tap="{{ onSignUp }}" class="btn btn-secondary mb-2" />
+        
+        <StackLayout orientation="horizontal" class="justify-center">
+            <Button text="Google" tap="{{ onGoogleLogin }}" class="btn-social mr-2" />
+            <Button text="Facebook" tap="{{ onFacebookLogin }}" class="btn-social" />
+        </StackLayout>
+        
+        <Label text="{{ errorMessage }}" class="text-red-500 text-center" textWrap="true" />
+    </StackLayout>
+</Page>
