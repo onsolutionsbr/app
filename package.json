@@ -4,9 +4,15 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "vite",                            // Inicia o servidor de desenvolvimento
+    "build": "tsc && vite build",             // Compila TypeScript e faz o build
+    "preview": "vite preview",                // Visualiza o build localmente
+    "clean": "rm -rf dist",                   // Remove a pasta de saída (dist)
+    "install:all": "npm install",             // Reinstala todas as dependências
+    "start": "npm run dev",                   // Alias para o script dev
+    "check:types": "tsc --noEmit",            // Verifica os tipos do TypeScript
+    "lint": "eslint 'src/**/*.{js,ts,tsx}'",  // Executa linting nos arquivos do projeto
+    "format": "prettier --write 'src/**/*.{js,ts,tsx}'" // Formata o código
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -26,6 +32,8 @@
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
+    "eslint": "^8.50.0",
+    "prettier": "^3.1.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.2.2",
